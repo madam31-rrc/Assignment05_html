@@ -21,10 +21,18 @@ input, button {
     margin-top: 20px;
 }
 
-.rover-photo {
-    width: 200px;
-    height: auto;
+.photo-card {
+    background: #1e1e1e;
+    border-radius: 8px;
+    padding: 10px;
     margin: 10px;
+    text-align: center;
+    width: 250px;
+}
+
+.rover-photo {
+    width: 100%;
+    height: auto;
     border-radius: 8px;
     border: 2px solid #fff;
 }
