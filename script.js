@@ -1,12 +1,20 @@
+import API_KEY from "./config.js";  // Import API key securely
+
 const API_KEY = "YOUR_NASA_API_KEY"; // Replace with your API key
 const photosContainer = document.getElementById("photos");
+const dateInput = document.getElementById("dateInput");
+const solInput = document.getElementById("solInput");
+const fetchPhotosBtn = document.getElementById("fetchPhotos");
 
 document.getElementById("fetchPhotos").addEventListener("click", fetchPhotos);
+
+fetchPhotosBtn.addEventListener("click", fetchPhotos);
 
 async function fetchPhotos() {
     const date = document.getElementById("dateInput").value;
     const sol = document.getElementById("solInput").value;
     
+    // Construct API request URL
     let url = `https://api.nasa.gov/mars-photos/api/v1/rovers/curiosity/photos?api_key=${API_KEY}`;
 
     if (date) {
