@@ -11,17 +11,33 @@
         <h1>Mars Rover Photo Explorer 🚀</h1>
     </header>
 
-    <section>
-        <label for="dateInput">Select an Earth Date:</label>
-        <input type="date" id="dateInput">
-        
-        <label for="solInput">Or enter a Martian Sol:</label>
-        <input type="number" id="solInput" min="0">
+    <main>
+        <section class="controls">
+            <label for="dateInput">Select an Earth Date:</label>
+            <input type="date" id="dateInput">
+            
+            <label for="solInput">Or enter a Martian Sol:</label>
+            <input type="number" id="solInput" min="0">
 
-        <button id="fetchPhotos">Get Photos</button>
-    </section>
+            <button id="fetchPhotos">Load Photos</button>
+        </section>
 
-    <section id="photos"></section>
+        <section class="events">
+            <h2>Significant Mars Rover Events</h2>
+            <select id="eventSelect">
+                <option value="">-- Select an Event --</option>
+                <option value="2013-04-04">2013 Solar Conjunction (Apr 4 - May 1)</option>
+                <option value="2015-06-07">2015 Solar Conjunction (Jun 7 - Jul 1)</option>
+                <option value="2017-07-22">2017 Solar Conjunction (Jul 22 - Aug 1)</option>
+                <option value="2018-06-01">2018 Martian Spring (Jun 1 - Dec 1)</option>
+                <option value="2021-10-02">2021 Solar Conjunction (Oct 2 - Oct 16)</option>
+            </select>
+        </section>
+
+        <section id="photos" class="photo-gallery">
+            <h2>Photos from Mars</h2>
+        </section>
+    </main>
 
     <script src="script.js"></script>
 </body>
