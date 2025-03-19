@@ -14,17 +14,18 @@
     <main>
         <section class="controls">
             <label for="dateInput">Select an Earth Date:</label>
-            <input type="date" id="dateInput">
+            <input type="date" id="dateInput" aria-label="Earth date input">
             
             <label for="solInput">Or enter a Martian Sol:</label>
-            <input type="number" id="solInput" min="0">
+            <input type="number" id="solInput" min="0" aria-label="Martian sol input">
 
-            <button id="fetchPhotos">Load Photos</button>
+            <button id="fetchPhotos" aria-label="Load Mars Rover Photos">Load Photos</button>
         </section>
 
         <section class="events">
             <h2>Significant Mars Rover Events</h2>
-            <select id="eventSelect">
+            <label for="eventSelect">Choose an event:</label>
+            <select id="eventSelect" aria-label="Mars Rover significant events">
                 <option value="">-- Select an Event --</option>
                 <option value="2013-04-04">2013 Solar Conjunction (Apr 4 - May 1)</option>
                 <option value="2015-06-07">2015 Solar Conjunction (Jun 7 - Jul 1)</option>
@@ -34,7 +35,7 @@
             </select>
         </section>
 
-        <section id="photos" class="photo-gallery">
+        <section id="photos" class="photo-gallery" aria-live="polite">
             <h2>Photos from Mars</h2>
         </section>
     </main>
